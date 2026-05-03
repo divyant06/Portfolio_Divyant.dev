@@ -37,17 +37,41 @@ interface GitHubData {
  */
 export function GitHubActivity() {
   const [data, setData] = useState<GitHubData | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     let mounted = true;
     fetch("/api/github")
-      .then((r) => r.json())
+      .then(async (r) => {
+        if (!r.ok) {
+          throw new Error(`HTTP error! status: ${r.status}`);
+        }
+        return r.json();
+      })
       .then((d: GitHubData) => mounted && setData(d))
-      .catch(() => {});
+      .catch((err) => {
+        console.error("GitHub fetch error:", err);
+        if (mounted) setError("Unable to fetch GitHub data. Check API token.");
+      });
     return () => {
       mounted = false;
     };
   }, []);
+
+  if (error) {
+    return (
+      <div
+        style={{
+          background: "#111111",
+          border: "1px solid rgba(255,255,255,0.06)",
+          borderRadius: "2px",
+          padding: "2rem",
+        }}
+      >
+        <div className="text-red-500 text-sm">Error: Unable to fetch GitHub data. Check API token.</div>
+      </div>
+    );
+  }
 
   if (!data || (!data.contributionCalendar && data.repositories.length === 0)) {
     return (

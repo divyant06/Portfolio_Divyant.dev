@@ -258,17 +258,30 @@ export function ProjectStartSection() {
               justifyContent: "center",
             }}
           >
-            <span
+            <button
+              onClick={() => {
+                const name = messages[2]?.text || "";
+                const project = messages[4]?.text || "";
+                const budget = messages[6]?.text || "";
+                const timeline = messages[8]?.text || "";
+                const subject = "Project Inquiry via Bot";
+                const body = `Name: ${name}\nProject Type: ${project}\nBudget: ${budget}\nTimeline: ${timeline}`;
+                window.location.href = `mailto:ansupoddar11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+              }}
               style={{
+                background: "transparent",
+                border: "none",
+                cursor: "pointer",
                 fontFamily: "var(--font-mono)",
                 fontSize: "0.65rem",
                 letterSpacing: "0.12em",
                 color: "#FF4500",
                 textTransform: "uppercase",
+                padding: 0,
               }}
             >
               ✓ Details captured — book your slot →
-            </span>
+            </button>
           </div>
         )}
       </div>

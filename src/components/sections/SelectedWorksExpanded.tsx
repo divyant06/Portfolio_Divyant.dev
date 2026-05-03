@@ -150,8 +150,8 @@ export function SelectedWorksExpanded() {
 
                       {/* Image carousel */}
                       <div>
-                        <div style={{ position: "relative", borderRadius: "4px", overflow: "hidden", aspectRatio: "16/9", border: "1px solid rgba(255,255,255,0.06)" }}>
-                          <Image src={p.images[curImg]} alt={`${p.title} screenshot ${curImg + 1}`} fill style={{ objectFit: "cover", objectPosition: "top" }} sizes="50vw" />
+                        <div style={{ position: "relative", borderRadius: "4px", overflow: "hidden", aspectRatio: "16/9", border: "1px solid rgba(255,255,255,0.06)", background: "#0a0a0a" }}>
+                          <Image src={p.images[curImg]} alt={`${p.title} screenshot ${curImg + 1}`} fill style={{ objectFit: "contain", objectPosition: "center" }} sizes="50vw" />
                           {p.images.length > 1 && (
                             <>
                               <button onClick={(e) => { e.stopPropagation(); prevImg(p.num, p.images.length); }} style={{ position: "absolute", left: "0.5rem", top: "50%", transform: "translateY(-50%)", background: "rgba(5,5,5,0.7)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "50%", width: "2rem", height: "2rem", color: "#F3F4F6", cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "0.8rem" }}>‹</button>

@@ -32,20 +32,26 @@ export function ContactForm() {
 
   return (
     <form
-      action="mailto:ansupoddar11@gmail.com"
-      method="POST"
-      encType="text/plain"
+      onSubmit={(e) => {
+        e.preventDefault();
+        const fd = new FormData(e.currentTarget);
+        const name = fd.get("Name") as string;
+        const email = fd.get("Email") as string;
+        const subject = (fd.get("Subject") as string) || "Project Inquiry";
+        const message = fd.get("Message") as string;
+        window.location.href = `mailto:ansupoddar11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message)}`;
+      }}
       style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
     >
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
         <div>
           <label htmlFor="contact-name" style={labelStyle}>Name</label>
-          <input id="contact-name" name="Name" type="text" required placeholder="Your name"
+          <input id="contact-name" name="Name" type="text" autoComplete="name" required placeholder="Your name"
             style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
         </div>
         <div>
           <label htmlFor="contact-email" style={labelStyle}>Email</label>
-          <input id="contact-email" name="Email" type="email" required placeholder="your@email.com"
+          <input id="contact-email" name="Email" type="email" autoComplete="email" required placeholder="your@email.com"
             style={inputStyle} onFocus={onFocus} onBlur={onBlur} />
         </div>
       </div>
