@@ -3,11 +3,11 @@ import Image from "next/image";
 import { ScrollToTopLink } from "@/components/ui/ScrollToTopLink";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
-  HeroTorus,
   GravityPitComp,
   CobeGlobe,
 } from "@/components/three";
 import {
+  HeroSection,
   SpotifyNowPlaying,
   GitHubActivity,
   ServicesSection,
@@ -42,151 +42,8 @@ const RULE: React.CSSProperties = {
 export default function Home() {
   return (
     <>
-      {/* ═══════════════════════════════════════════════════
-          §1  HERO  —  100dvh, absolute children, 10vw type
-      ═══════════════════════════════════════════════════ */}
-      <section
-        id="hero"
-        style={{
-          position: "relative",
-          height: "100dvh",
-          overflow: "hidden",
-          background: "#050505",
-        }}
-      >
-        {/* Blueprint §3 Suspense — dark skeleton while 3D loads */}
-        <Suspense fallback={
-          <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", pointerEvents: "none" }}>
-            <div className="skeleton-pulse" style={{ width: "320px", height: "320px", borderRadius: "50%", background: "rgba(255,255,255,0.03)" }} />
-          </div>
-        }>
-          <HeroTorus />
-        </Suspense>
+      <HeroSection />
 
-        {/* Top-right: label + descriptor */}
-        <div
-          style={{
-            position: "absolute",
-            top: "clamp(5.5rem, 10vh, 8rem)",
-            right: "3vw",
-            maxWidth: "28ch",
-            textAlign: "right",
-            display: "flex",
-            flexDirection: "column",
-            gap: "1rem",
-            zIndex: 10,
-            padding: "1.25rem 1.5rem",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.65rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "#FF4500",
-              margin: 0,
-              textShadow: "0 2px 10px rgba(0,0,0,0.8)",
-            }}
-          >
-            Full-Stack Developer&nbsp;&nbsp;/&nbsp;&nbsp;2024
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "clamp(0.75rem, 1vw, 0.875rem)",
-              lineHeight: 1.7,
-              color: "rgba(243,244,246,0.6)",
-              margin: 0,
-              textShadow: "0 2px 10px rgba(0,0,0,0.8)",
-            }}
-          >
-            Divyant this side. A developer bridging the gap between heavy
-            technical engineering and flawless, modern design. I&nbsp;don&apos;t just
-            build templates; I&nbsp;craft custom digital solutions designed to scale.
-          </p>
-        </div>
-
-        {/* Bottom-left: massive headline — §3.1 responsive VW sizing */}
-        <h1
-          style={{
-            position: "absolute",
-            bottom: "4vh",
-            left: 0,
-            width: "100%",
-            paddingLeft: "3vw",
-            paddingRight: "3vw",
-            fontFamily: "var(--font-heading)",
-            /* Blueprint §3.1: 16vw on mobile, 10vw on desktop */
-            fontSize: "clamp(2.5rem, 16vw, 13rem)",
-            fontWeight: 800,
-            lineHeight: 1,
-            letterSpacing: "-0.05em",
-            color: "#F3F4F6",
-            margin: 0,
-            zIndex: 2,
-          }}
-        >
-          <ScrollToTopLink
-            href="/"
-            style={{ color: "inherit", textDecoration: "none", outline: "none" }}
-          >
-            Creating
-            <br />
-            <span style={{ fontSize: "clamp(1.25rem, 3vw, 1.5rem)", fontStyle: "italic", fontWeight: 400, opacity: 0.8, display: "block", marginBottom: "-0.2em", letterSpacing: "0" }}>
-              experiences.
-            </span>
-            experiences that
-            <br />
-            <em
-              style={{
-                color: "#FF4500",
-                fontStyle: "italic",
-                display: "inline-block",
-                marginRight: "0.08em",
-              }}
-            >
-              refuse
-            </em>{" "}
-            to be
-            <br />
-            ignored.
-          </ScrollToTopLink>
-        </h1>
-
-        {/* Scroll indicator */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "clamp(1rem, 2vh, 1.75rem)",
-            left: "3vw",
-            display: "flex",
-            alignItems: "center",
-            gap: "0.625rem",
-            zIndex: 2,
-          }}
-        >
-          <span
-            style={{
-              display: "block",
-              width: "32px",
-              height: "1px",
-              background: "rgba(255,255,255,0.18)",
-            }}
-          />
-          <span
-            style={{
-              fontFamily: "var(--font-mono)",
-              fontSize: "0.58rem",
-              letterSpacing: "0.22em",
-              color: "rgba(255,255,255,0.22)",
-              textTransform: "uppercase",
-            }}
-          >
-            Scroll
-          </span>
-        </div>
-      </section>
 
       {/* ═══════════════════════════════════════════════════
           §2  GRAVITY PIT  —  matter-js physics
@@ -422,8 +279,9 @@ export default function Home() {
               height={600}
               style={{
                 width: "100%",
-                height: "auto",
-                borderRadius: "4px",
+                height: "clamp(200px, 30vh, 300px)",
+                objectFit: "cover",
+                borderRadius: "8px",
                 border: "1px solid rgba(255,255,255,0.08)"
               }}
             />

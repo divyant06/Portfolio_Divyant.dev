@@ -32,3 +32,8 @@ export const ProjectStartSection = dynamic(
   () => import("@/components/sections/ProjectStartSection").then((m) => m.ProjectStartSection),
   { ssr: false }
 );
+
+export const HeroSection = dynamic(
+  () => import("@/components/sections/HeroSection").then((m) => m.HeroSection),
+  { ssr: false }
+);
