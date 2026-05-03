@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Link from "next/link";
+import { ScrollToTopLink } from "@/components/ui/ScrollToTopLink";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
   HeroTorus,
@@ -126,14 +126,8 @@ export default function Home() {
             zIndex: 2,
           }}
         >
-          <Link
+          <ScrollToTopLink
             href="/"
-            onClick={(e) => {
-              if (window.location.pathname === "/") {
-                e.preventDefault();
-                window.scrollTo({ top: 0, behavior: "smooth" });
-              }
-            }}
             style={{ color: "inherit", textDecoration: "none", outline: "none" }}
           >
             Creating
@@ -156,7 +150,7 @@ export default function Home() {
             to be
             <br />
             ignored.
-          </Link>
+          </ScrollToTopLink>
         </h1>
 
         {/* Scroll indicator */}
