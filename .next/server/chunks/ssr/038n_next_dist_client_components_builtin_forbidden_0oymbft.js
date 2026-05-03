@@ -1,5 +1,0 @@
-;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="82d1ba55-e340-d70b-fc86-26c07af7cc6f")}catch(e){}}();
-module.exports=[99604,(a,b,c)=>{"use strict";Object.defineProperty(c,"__esModule",{value:!0}),Object.defineProperty(c,"default",{enumerable:!0,get:function(){return f}});let d=a.r(60309),e=a.r(16118);function f(){return(0,d.jsx)(e.HTTPAccessErrorFallback,{status:403,message:"This page could not be accessed."})}("function"==typeof c.default||"object"==typeof c.default&&null!==c.default)&&void 0===c.default.__esModule&&(Object.defineProperty(c.default,"__esModule",{value:!0}),Object.assign(c.default,c),b.exports=c.default)},78266,a=>{a.n(a.i(99604))}];
-
-//# debugId=82d1ba55-e340-d70b-fc86-26c07af7cc6f
-//# sourceMappingURL=038n_next_dist_client_components_builtin_forbidden_0oymbft.js.map

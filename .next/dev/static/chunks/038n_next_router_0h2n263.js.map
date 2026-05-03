@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "debugId": "963b4fa3-0545-d912-9d84-b3fff51ddc8e",
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Abcom/Documents/Portfolio_site/portfolio/node_modules/next/router.js"],"sourcesContent":["module.exports = require('./dist/client/router')\n"],"names":["module","exports"],"mappings":"AAAAA,OAAOC,OAAO","ignoreList":[0]}}]
-}

@@ -1,8 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "debugId": "c416fd2c-cc6d-b4bd-dd48-f93abb9c44e5",
-  "sections": [
-    {"offset": {"line": 4, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Abcom/Documents/Portfolio_site/portfolio/node_modules/next/router.js"],"sourcesContent":["module.exports = require('./dist/client/router')\n"],"names":["module","exports"],"mappings":"AAAAA,OAAOC,OAAO","ignoreList":[0]}},
-    {"offset": {"line": 8, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Abcom/Documents/Portfolio_site/portfolio/node_modules/next/app.js"],"sourcesContent":["module.exports = require('./dist/pages/_app')\n"],"names":["module","exports"],"mappings":"AAAAA,OAAOC,OAAO","ignoreList":[0]}}]
-}
