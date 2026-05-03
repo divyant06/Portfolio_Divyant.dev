@@ -1,0 +1,26 @@
+{
+  "devFiles": [],
+  "ampDevFiles": [],
+  "polyfillFiles": [],
+  "lowPriorityFiles": [],
+  "rootMainFiles": [],
+  "pages": {
+    "/_error": [
+      "static/chunks/038n_next_dist_compiled_0r28yw.._.js",
+      "static/chunks/038n_next_dist_shared_lib_0pe44fe._.js",
+      "static/chunks/038n_next_dist_client_0ivzpn3._.js",
+      "static/chunks/038n_next_dist_06syrb0._.js",
+      "static/chunks/038n_next_router_0gl285z.js",
+      "static/chunks/[next]_entry_page-loader_ts_0hr6g5l._.js",
+      "static/chunks/038n_react-dom_0xmzre6._.js",
+      "static/chunks/038n_@sentry_core_build_esm_0~59x4~._.js",
+      "static/chunks/038n_@sentry_browser_build_npm_esm_dev_0g6o7dm._.js",
+      "static/chunks/038n_@sentry-internal_browser-utils_build_esm_0490snb._.js",
+      "static/chunks/038n_058o82v._.js",
+      "static/chunks/[root-of-the-server]__025o84o._.js",
+      "static/chunks/portfolio_pages__error_07xvfw~._.js",
+      "static/chunks/turbopack-portfolio_pages__error_0x86rp7._.js"
+    ]
+  },
+  "ampFirstPages": []
+}

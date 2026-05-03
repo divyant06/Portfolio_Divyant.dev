@@ -1,0 +1,63 @@
+globalThis.__BUILD_MANIFEST = {
+  "pages": {
+    "/_app": [
+      "static/chunks/038n_next_dist_compiled_0r28yw.._.js",
+      "static/chunks/038n_next_dist_shared_lib_0ei5k-a._.js",
+      "static/chunks/038n_next_dist_client_0ivzpn3._.js",
+      "static/chunks/038n_next_dist_0xvptd.._.js",
+      "static/chunks/038n_next_0b3s_bi._.js",
+      "static/chunks/[next]_entry_page-loader_ts_01pi663._.js",
+      "static/chunks/038n_react-dom_0xmzre6._.js",
+      "static/chunks/038n_@sentry_core_build_esm_0~59x4~._.js",
+      "static/chunks/038n_@sentry_browser_build_npm_esm_dev_0g6o7dm._.js",
+      "static/chunks/038n_@sentry-internal_browser-utils_build_esm_0490snb._.js",
+      "static/chunks/038n_058o82v._.js",
+      "static/chunks/[root-of-the-server]__13q.5a8._.js",
+      "static/chunks/portfolio_pages__app_07xvfw~._.js",
+      "static/chunks/turbopack-portfolio_pages__app_00_bz-~._.js"
+    ],
+    "/_error": [
+      "static/chunks/038n_next_dist_compiled_0r28yw.._.js",
+      "static/chunks/038n_next_dist_shared_lib_0pe44fe._.js",
+      "static/chunks/038n_next_dist_client_0ivzpn3._.js",
+      "static/chunks/038n_next_dist_06syrb0._.js",
+      "static/chunks/038n_next_router_0gl285z.js",
+      "static/chunks/[next]_entry_page-loader_ts_0hr6g5l._.js",
+      "static/chunks/038n_react-dom_0xmzre6._.js",
+      "static/chunks/038n_@sentry_core_build_esm_0~59x4~._.js",
+      "static/chunks/038n_@sentry_browser_build_npm_esm_dev_0g6o7dm._.js",
+      "static/chunks/038n_@sentry-internal_browser-utils_build_esm_0490snb._.js",
+      "static/chunks/038n_058o82v._.js",
+      "static/chunks/[root-of-the-server]__025o84o._.js",
+      "static/chunks/portfolio_pages__error_07xvfw~._.js",
+      "static/chunks/turbopack-portfolio_pages__error_0x86rp7._.js"
+    ]
+  },
+  "devFiles": [],
+  "polyfillFiles": [
+    "static/chunks/038n_next_dist_build_polyfills_polyfill-nomodule.js"
+  ],
+  "lowPriorityFiles": [
+    "static/development/_buildManifest.js",
+    "static/development/_ssgManifest.js",
+    "static/development/_clientMiddlewareManifest.js"
+  ],
+  "rootMainFiles": [
+    "static/chunks/[turbopack]_browser_dev_hmr-client_hmr-client_ts_09ecn~a._.js",
+    "static/chunks/038n_next_dist_compiled_react-dom_0.y34hs._.js",
+    "static/chunks/038n_next_dist_compiled_next-devtools_index_0t1nw.w.js",
+    "static/chunks/038n_next_dist_compiled_react-server-dom-turbopack_0tj6v.9._.js",
+    "static/chunks/038n_next_dist_compiled_0xx3jq~._.js",
+    "static/chunks/038n_next_dist_shared_lib_0cfojiu._.js",
+    "static/chunks/038n_next_dist_client_0kk.x9a._.js",
+    "static/chunks/038n_next_dist_06o2r~t._.js",
+    "static/chunks/038n_next_router_0h2n263.js",
+    "static/chunks/038n_@sentry_core_build_esm_0s3w8ja._.js",
+    "static/chunks/038n_@sentry_browser_build_npm_esm_dev_0nkew13._.js",
+    "static/chunks/038n_@sentry-internal_browser-utils_build_esm_0fyt8nh._.js",
+    "static/chunks/038n_13sjwfw._.js",
+    "static/chunks/portfolio_src_instrumentation-client_ts_0ps3hp8._.js",
+    "static/chunks/portfolio_0rqeker._.js",
+    "static/chunks/turbopack-portfolio_0atsrn5._.js"
+  ]
+};

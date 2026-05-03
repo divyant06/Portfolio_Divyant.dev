@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "debugId": "5b708402-041f-5cf2-e7f8-71d272f90fb1",
+  "sections": [
+    {"offset": {"line": 5, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Abcom/Documents/Portfolio_site/portfolio/sentry.server.config.ts"],"sourcesContent":["// This file configures the initialization of Sentry on the server.\n// The config you add here will be used whenever the server handles a request.\n// https://docs.sentry.io/platforms/javascript/guides/nextjs/\n\nimport * as Sentry from \"@sentry/nextjs\";\n\nSentry.init({\n  dsn: \"https://1e126446b46b1b313e8da483c690c9f0@o4511255004643328.ingest.us.sentry.io/4511255004774400\",\n\n  // Define how likely traces are sampled. Adjust this value in production, or use tracesSampler for greater control.\n  tracesSampleRate: 1,\n\n  // Enable logs to be sent to Sentry\n  enableLogs: true,\n\n  // Enable sending user PII (Personally Identifiable Information)\n  // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/options/#sendDefaultPii\n  sendDefaultPii: true,\n});\n"],"names":["dsn","tracesSampleRate","enableLogs","sendDefaultPii"],"mappings":";AAAA,mEAAmE;AACnE,8EAA8E;AAC9E,6DAA6D;AAE7D;;AAEA,+LAAW,CAAC;IACVA,KAAK;IAEL,mHAAmH;IACnHC,kBAAkB;IAElB,mCAAmC;IACnCC,YAAY;IAEZ,gEAAgE;IAChE,kGAAkG;IAClGC,gBAAgB;AAClB"}}]
+}
