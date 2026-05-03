@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Image from "next/image";
 import { ScrollToTopLink } from "@/components/ui/ScrollToTopLink";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
@@ -414,9 +415,11 @@ export default function Home() {
 
           {/* Right Side: Mindset Image & Quote */}
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-            <img 
-              src="/assets/about-mindset.jpg" 
-              alt="About Mindset" 
+            <Image
+              src="/assets/about-mindset.jpg"
+              alt="About Mindset"
+              width={800}
+              height={600}
               style={{
                 width: "100%",
                 height: "auto",
@@ -433,7 +436,7 @@ export default function Home() {
               borderLeft: "2px solid #FF4500",
               paddingLeft: "1.5rem"
             }}>
-              "I don't just write code; I architect cinematic digital experiences. As a relentless Computer Science guy and full-stack freelancer, I have dedicated countless nights to turning abstract, impactful ideas into flawless, high-performance realities. This isn't just a career path—it's an obsession with great solutions that refuse to be overlooked."
+              &ldquo;I don&apos;t just write code; I architect cinematic digital experiences. As a relentless Computer Science guy and full-stack freelancer, I have dedicated countless nights to turning abstract, impactful ideas into flawless, high-performance realities. This isn&apos;t just a career path&mdash;it&apos;s an obsession with great solutions that refuse to be overlooked.&rdquo;
             </blockquote>
           </div>
         </div>
