@@ -317,14 +317,7 @@ export default function Home() {
         <ProjectStartSection />
       </section>
 
-      {/* ═══════════════════════════════════════════════════
-          AdSense Banner
-      ═══════════════════════════════════════════════════ */}
-      <div style={{ padding: "4rem 3vw", background: "#050505", borderTop: "1px solid rgba(255,255,255,0.07)", display: "flex", justifyContent: "center" }}>
-        <div style={{ width: "100%", maxWidth: "970px" }}>
-          <AdBanner />
-        </div>
-      </div>
+
 
       {/* ═══════════════════════════════════════════════════
           §8  FOOTER — minimal + AdSense
@@ -392,12 +385,7 @@ export default function Home() {
           ))}
         </div>
 
-        {/* AdSense banner — pub-7958603436560948 — dark bg fix */}
-        <div className="adsense-container" style={{ borderTop: "1px solid rgba(255,255,255,0.04)", padding: "1rem 3vw", background: "#050505" }}>
-          <ins className="adsbygoogle" style={{ display: "block", width: "100%", maxWidth: "970px" }}
-            data-ad-client="ca-pub-7958603436560948" data-ad-slot="auto"
-            data-ad-format="horizontal" data-full-width-responsive="true" />
-        </div>
+        <AdBanner />
       </footer>
     </>
   );

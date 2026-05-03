@@ -18,13 +18,15 @@ export function AdBanner() {
   }, []);
 
   return (
-    <ins
-      className="adsbygoogle"
-      style={{ display: "block" }}
-      data-ad-client="ca-pub-7958603436560948"
-      data-ad-slot="4887322173"
-      data-ad-format="auto"
-      data-full-width-responsive="true"
-    />
+    <div className="w-full flex justify-center overflow-hidden mt-8 min-h-[90px] bg-transparent">
+      <ins
+        className="adsbygoogle"
+        style={{ display: "block", backgroundColor: "transparent" }}
+        data-ad-client="ca-pub-7958603436560948"
+        data-ad-slot="4887322173"
+        data-ad-format="auto"
+        data-full-width-responsive="true"
+      />
+    </div>
   );
 }

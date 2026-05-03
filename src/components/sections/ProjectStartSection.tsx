@@ -260,13 +260,12 @@ export function ProjectStartSection() {
           >
             <button
               onClick={() => {
-                const name = messages[2]?.text || "";
                 const project = messages[4]?.text || "";
                 const budget = messages[6]?.text || "";
                 const timeline = messages[8]?.text || "";
-                const subject = "Project Inquiry via Bot";
-                const body = `Name: ${name}\nProject Type: ${project}\nBudget: ${budget}\nTimeline: ${timeline}`;
-                window.location.href = `mailto:ansupoddar11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
+                const message = `Hi Divyant! I was exploring your portfolio and I'd like to discuss a project. \n\n*Project Type:* ${project} \n*Budget:* ${budget} \n*Timeline:* ${timeline}`;
+                window.open(`https://wa.me/916901449478?text=${encodeURIComponent(message)}`, '_blank');
               }}
               style={{
                 background: "transparent",
