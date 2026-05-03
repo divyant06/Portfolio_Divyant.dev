@@ -67,6 +67,7 @@ export function ProjectStartSection() {
 
   return (
     <div
+      id="contact"
       style={{
         display: "grid",
         gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))",

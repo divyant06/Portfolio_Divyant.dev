@@ -8,7 +8,7 @@ const NAV_LINKS: { label: string; href: string; external?: boolean }[] = [
   { label: "Services", href: "#services" },
   { label: "Updates ↗", href: "https://www.linkedin.com/in/divyant-poddar-4b6672313", external: true },
   { label: "Contact", href: "#contact" },
-  { label: "About", href: "#bento" },
+  { label: "About", href: "#about" },
 ];
 
 export function Navbar() {
@@ -61,7 +61,18 @@ export function Navbar() {
   return (
     <header ref={navRef} className={navClass} aria-label="Main navigation">
       {/* Logo */}
-      <Link href="/" className="nav-logo" aria-label="Home" style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '0.9375rem', letterSpacing: '0em' }}>
+      <Link
+        href="/"
+        className="nav-logo"
+        aria-label="Home"
+        style={{ fontFamily: 'var(--font-body)', fontWeight: 500, fontSize: '0.9375rem', letterSpacing: '0em' }}
+        onClick={(e) => {
+          if (window.location.pathname === "/") {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }
+        }}
+      >
         Divyant Poddar.
       </Link>
 

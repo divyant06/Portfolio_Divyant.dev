@@ -118,7 +118,7 @@ export default function Home() {
             /* Blueprint §3.1: 16vw on mobile, 10vw on desktop */
             fontSize: "clamp(2.5rem, 16vw, 13rem)",
             fontWeight: 800,
-            lineHeight: 0.95,
+            lineHeight: 1,
             letterSpacing: "-0.05em",
             color: "#F3F4F6",
             margin: 0,
@@ -250,6 +250,58 @@ export default function Home() {
       </section>
 
       <hr style={RULE} />
+
+      {/* ═══════════════════════════════════════════════════
+          ABOUT / MINDSET
+      ═══════════════════════════════════════════════════ */}
+      <section id="about" style={{ ...SECTION_PAD, paddingBottom: "2rem" }}>
+        <span style={LABEL}>Mindset / Technical Philosophy</span>
+        <h3
+          style={{
+            fontFamily: "var(--font-space-grotesk)",
+            fontSize: "clamp(1.75rem, 3.5vw, 3rem)",
+            fontWeight: 600,
+            lineHeight: 1.2,
+            letterSpacing: "-0.02em",
+            color: "#F3F4F6",
+            maxWidth: "28ch",
+            marginTop: "1.5rem",
+            marginBottom: "1.5rem",
+          }}
+        >
+          Bridging heavy engineering with flawless design.
+        </h3>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))",
+            gap: "2rem",
+          }}
+        >
+          <p
+            style={{
+              fontFamily: "var(--font-space-grotesk)",
+              fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
+              lineHeight: 1.7,
+              color: "rgba(243,244,246,0.6)",
+              margin: 0,
+            }}
+          >
+            I believe that true digital experiences happen at the intersection of robust backend architecture and meticulous, pixel-perfect frontends. I do not just build functional systems; I craft high-end, scalable applications designed to perform flawlessly under pressure while delivering a premium aesthetic.
+          </p>
+          <p
+            style={{
+              fontFamily: "var(--font-space-grotesk)",
+              fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
+              lineHeight: 1.7,
+              color: "rgba(243,244,246,0.6)",
+              margin: 0,
+            }}
+          >
+            By avoiding generic templates, I ensure every component—from complex 3D WebGL interactions to state-driven server components—is intentionally architected for the bold.
+          </p>
+        </div>
+      </section>
 
       {/* ═══════════════════════════════════════════════════
           §6  THE SETUP — bento grid + globe
