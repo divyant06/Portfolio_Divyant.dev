@@ -8,10 +8,19 @@ import { ScrollToTopLink } from "@/components/ui/ScrollToTopLink";
 export function HeroSection() {
   /* ── Fix 1: Force scroll to top on every fresh page load ── */
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      history.scrollRestoration = "manual";
-      window.scrollTo(0, 0);
+    // Prevent browser from restoring previous scroll position
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
     }
+    // Force scroll to top
+    window.scrollTo(0, 0);
+    
+    // Backup timeout in case an embed (like Cal.com) tries to steal focus slightly after paint
+    const timeoutId = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+
+    return () => clearTimeout(timeoutId);
   }, []);
 
   /* ── Framer Motion variants ── */
