@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Matter from "matter-js";
+import { useInView } from "framer-motion";
 
 /* ── Tech stack with official brand colors & SVG icon paths ── */
 interface TechItem {
@@ -89,8 +90,12 @@ export function GravityPit() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const engineRef = useRef<Matter.Engine | null>(null);
   const [ready, setReady] = useState(false);
+  
+  const isInView = useInView(containerRef, { once: true, amount: 0.1 });
 
   useEffect(() => {
+    if (!isInView) return;
+
     const container = containerRef.current;
     const canvas = canvasRef.current;
     if (!container || !canvas) return;
@@ -106,8 +111,8 @@ export function GravityPit() {
     const ctx = canvas.getContext("2d")!;
     ctx.scale(dpr, dpr);
 
-    // Engine
-    const engine = Matter.Engine.create({ gravity: { x: 0, y: 1.2 } });
+    // Engine - Reduced gravity for a slower, "luxurious" drop
+    const engine = Matter.Engine.create({ gravity: { x: 0, y: 0.2 } });
     engineRef.current = engine;
 
     // Walls (invisible)
@@ -138,9 +143,9 @@ export function GravityPit() {
 
       const body = Matter.Bodies.rectangle(x, y, w, h, {
         chamfer: { radius: h / 2 },
-        restitution: 0.45,
-        friction: 0.3,
-        frictionAir: 0.01,
+        restitution: 0.2,
+        friction: 0.5,
+        frictionAir: 0.03,
         density: 0.002,
       });
 
@@ -264,7 +269,7 @@ export function GravityPit() {
       window.removeEventListener("resize", onResize);
       Matter.Engine.clear(engine);
     };
-  }, []);
+  }, [isInView]);
 
   return (
     <div

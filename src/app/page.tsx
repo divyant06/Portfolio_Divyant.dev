@@ -1,4 +1,5 @@
 import { Suspense } from "react";
+import Link from "next/link";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
   HeroTorus,
@@ -125,23 +126,37 @@ export default function Home() {
             zIndex: 2,
           }}
         >
-          Creating
-          <br />
-          experiences that
-          <br />
-          <em
-            style={{
-              color: "#FF4500",
-              fontStyle: "italic",
-              display: "inline-block",
-              marginRight: "0.08em",
+          <Link
+            href="/"
+            onClick={(e) => {
+              if (window.location.pathname === "/") {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
             }}
+            style={{ color: "inherit", textDecoration: "none", outline: "none" }}
           >
-            refuse
-          </em>{" "}
-          to be
-          <br />
-          ignored.
+            Creating
+            <br />
+            <span style={{ fontSize: "clamp(1.25rem, 3vw, 1.5rem)", fontStyle: "italic", fontWeight: 400, opacity: 0.8, display: "block", marginBottom: "-0.2em", letterSpacing: "0" }}>
+              experiences.
+            </span>
+            experiences that
+            <br />
+            <em
+              style={{
+                color: "#FF4500",
+                fontStyle: "italic",
+                display: "inline-block",
+                marginRight: "0.08em",
+              }}
+            >
+              refuse
+            </em>{" "}
+            to be
+            <br />
+            ignored.
+          </Link>
         </h1>
 
         {/* Scroll indicator */}
@@ -251,57 +266,7 @@ export default function Home() {
 
       <hr style={RULE} />
 
-      {/* ═══════════════════════════════════════════════════
-          ABOUT / MINDSET
-      ═══════════════════════════════════════════════════ */}
-      <section id="about" style={{ ...SECTION_PAD, paddingBottom: "2rem" }}>
-        <span style={LABEL}>Mindset / Technical Philosophy</span>
-        <h3
-          style={{
-            fontFamily: "var(--font-space-grotesk)",
-            fontSize: "clamp(1.75rem, 3.5vw, 3rem)",
-            fontWeight: 600,
-            lineHeight: 1.2,
-            letterSpacing: "-0.02em",
-            color: "#F3F4F6",
-            maxWidth: "28ch",
-            marginTop: "1.5rem",
-            marginBottom: "1.5rem",
-          }}
-        >
-          Bridging heavy engineering with flawless design.
-        </h3>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))",
-            gap: "2rem",
-          }}
-        >
-          <p
-            style={{
-              fontFamily: "var(--font-space-grotesk)",
-              fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
-              lineHeight: 1.7,
-              color: "rgba(243,244,246,0.6)",
-              margin: 0,
-            }}
-          >
-            I believe that true digital experiences happen at the intersection of robust backend architecture and meticulous, pixel-perfect frontends. I do not just build functional systems; I craft high-end, scalable applications designed to perform flawlessly under pressure while delivering a premium aesthetic.
-          </p>
-          <p
-            style={{
-              fontFamily: "var(--font-space-grotesk)",
-              fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
-              lineHeight: 1.7,
-              color: "rgba(243,244,246,0.6)",
-              margin: 0,
-            }}
-          >
-            By avoiding generic templates, I ensure every component—from complex 3D WebGL interactions to state-driven server components—is intentionally architected for the bold.
-          </p>
-        </div>
-      </section>
+
 
       {/* ═══════════════════════════════════════════════════
           §6  THE SETUP — bento grid + globe
@@ -429,21 +394,54 @@ export default function Home() {
       <hr style={RULE} />
 
       {/* ═══════════════════════════════════════════════════
-          §2.3  CONTACT FORM — mailto:ansupoddar11@gmail.com
+          §2.3  CONTACT FORM & ABOUT MINDSET
       ═══════════════════════════════════════════════════ */}
-      <section id="contact-form" style={{ ...SECTION_PAD, paddingBottom: "4rem" }}>
-        <div style={{ maxWidth: "640px" }}>
-          <span style={LABEL}>Get In Touch</span>
-          <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1, color: "#F3F4F6", margin: "0 0 1rem" }}>
-            Let&apos;s make something exceptional.
-          </h2>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", lineHeight: 1.7, color: "rgba(255,255,255,0.35)", marginBottom: "2.5rem", maxWidth: "48ch" }}>
-            Drop me a message directly. I&apos;ll get back within 24 hours. Or{" "}
-            <a href="https://cal.com/divyant06/30min" target="_blank" rel="noopener noreferrer" style={{ color: "#FF4500", textDecoration: "none", borderBottom: "1px solid rgba(255,69,0,0.3)" }}>
-              book a call →
-            </a>
-          </p>
-          <ContactForm />
+      <section id="about" style={{ ...SECTION_PAD, paddingBottom: "4rem" }}>
+        <div style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))",
+          gap: "4rem",
+          alignItems: "start"
+        }}>
+          {/* Left Side: Contact Form */}
+          <div style={{ maxWidth: "640px" }}>
+            <span style={LABEL}>Get In Touch / About</span>
+            <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1, color: "#F3F4F6", margin: "0 0 1rem" }}>
+              Let&apos;s make something exceptional.
+            </h2>
+            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", lineHeight: 1.7, color: "rgba(255,255,255,0.35)", marginBottom: "2.5rem", maxWidth: "48ch" }}>
+              Drop me a message directly. I&apos;ll get back within 24 hours. Or{" "}
+              <a href="https://cal.com/divyant06/30min" target="_blank" rel="noopener noreferrer" style={{ color: "#FF4500", textDecoration: "none", borderBottom: "1px solid rgba(255,69,0,0.3)" }}>
+                book a call →
+              </a>
+            </p>
+            <ContactForm />
+          </div>
+
+          {/* Right Side: Mindset Image & Quote */}
+          <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
+            <img 
+              src="/assets/about-mindset.jpg" 
+              alt="About Mindset" 
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "4px",
+                border: "1px solid rgba(255,255,255,0.08)"
+              }}
+            />
+            <blockquote style={{
+              fontFamily: "var(--font-space-grotesk)",
+              fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
+              lineHeight: 1.7,
+              color: "rgba(243,244,246,0.6)",
+              margin: 0,
+              borderLeft: "2px solid #FF4500",
+              paddingLeft: "1.5rem"
+            }}>
+              "I don't just write code; I architect cinematic digital experiences. As a relentless Computer Science guy and full-stack freelancer, I have dedicated countless nights to turning abstract, impactful ideas into flawless, high-performance realities. This isn't just a career path—it's an obsession with great solutions that refuse to be overlooked."
+            </blockquote>
+          </div>
         </div>
       </section>
 
