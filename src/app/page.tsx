@@ -1,6 +1,4 @@
-import { Suspense } from "react";
 import Image from "next/image";
-import { ScrollToTopLink } from "@/components/ui/ScrollToTopLink";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import {
   GravityPitComp,
@@ -14,6 +12,7 @@ import {
   SelectedWorksExpanded,
   ProjectStartSection,
 } from "@/components/sections";
+import { AdBanner } from "@/components/AdBanner";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { ContactForm } from "@/components/sections/ContactForm";
 
@@ -317,6 +316,15 @@ export default function Home() {
         </div>
         <ProjectStartSection />
       </section>
+
+      {/* ═══════════════════════════════════════════════════
+          AdSense Banner
+      ═══════════════════════════════════════════════════ */}
+      <div style={{ padding: "4rem 3vw", background: "#050505", borderTop: "1px solid rgba(255,255,255,0.07)", display: "flex", justifyContent: "center" }}>
+        <div style={{ width: "100%", maxWidth: "970px" }}>
+          <AdBanner />
+        </div>
+      </div>
 
       {/* ═══════════════════════════════════════════════════
           §8  FOOTER — minimal + AdSense
