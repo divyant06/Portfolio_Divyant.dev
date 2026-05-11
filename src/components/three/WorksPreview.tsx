@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useState, useCallback } from "react";
+import { useState, useCallback, useId } from "react";
 import { motion } from "framer-motion";
 
 /*
@@ -10,9 +10,6 @@ import { motion } from "framer-motion";
   and delivers the liquid-ripple aesthetic.
 */
 
-/* Unique SVG filter per component instance */
-let instanceCounter = 0;
-
 export function WorksPreview({
   label,
   color = "#FF4500",
@@ -21,7 +18,8 @@ export function WorksPreview({
   color?: string;
 }) {
   const [hovered, setHovered] = useState(false);
-  const filterId = useRef(`jelly-${++instanceCounter}`);
+  const id = useId();
+  const filterId = `jelly-${id.replace(/:/g, '')}`;
 
   const onEnter = useCallback(() => setHovered(true), []);
   const onLeave = useCallback(() => setHovered(false), []);
@@ -45,7 +43,7 @@ export function WorksPreview({
         justifyContent: "center",
         overflow: "hidden",
         position: "relative",
-        filter: hovered ? `url(#${filterId.current})` : "none",
+        filter: hovered ? `url(#${filterId})` : "none",
         transition: "filter 0.3s ease",
       }}
     >
@@ -59,7 +57,7 @@ export function WorksPreview({
         }}
       >
         <defs>
-          <filter id={filterId.current}>
+          <filter id={filterId}>
             <feTurbulence
               type="turbulence"
               baseFrequency={hovered ? "0.015 0.02" : "0 0"}

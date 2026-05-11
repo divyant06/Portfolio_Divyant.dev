@@ -1,9 +1,6 @@
 import Image from "next/image";
 import { MagneticButton } from "@/components/ui/MagneticButton";
-import {
-  GravityPitComp,
-  CobeGlobe,
-} from "@/components/three";
+import { GravityPitComp } from "@/components/three";
 import {
   HeroSection,
   SpotifyNowPlaying,
@@ -15,6 +12,7 @@ import {
 import { AdBanner } from "@/components/AdBanner";
 import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { Globe3D, GlobeMarker } from "@/components/ui/3d-globe";
 
 /* ── Shared style tokens ──────────────────────────────── */
 const LABEL: React.CSSProperties = {
@@ -37,6 +35,13 @@ const RULE: React.CSSProperties = {
   borderTop: "1px solid rgba(255,255,255,0.07)",
   margin: 0,
 };
+
+const myLocation: GlobeMarker[] = [{
+  lat: 28.6139,
+  lng: 77.2090,
+  src: "https://media.licdn.com/dms/image/v2/D5603AQHO6t7k82pkbw/profile-displayphoto-scale_400_400/B56Zjl4.RpHQAs-/0/1756203576978?e=1779321600&v=beta&t=Zf2uhyMd-_UQaAq-UkSN3cWz1EDMqO0nB0xD2RYSImE",
+  label: "Divyant | New Delhi",
+}];
 
 export default function Home() {
   return (
@@ -198,7 +203,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* ── RIGHT: COBE GLOBE ─────────────────── */}
+          {/* ── RIGHT: GLOBE3D ─────────────────── */}
           <div
             style={{
               background: "#0a0a0a",
@@ -225,7 +230,18 @@ export default function Home() {
                 pointerEvents: "none",
               }}
             />
-            <CobeGlobe />
+            {/* Interactive 3D Globe */}
+            <div style={{ position: "relative", width: "100%", flex: 1, minHeight: "300px" }}>
+              <Globe3D
+                markers={myLocation}
+                config={{
+                  atmosphereColor: "#ff4500",
+                  atmosphereIntensity: 20,
+                  bumpScale: 5,
+                  autoRotateSpeed: 0.5,
+                }}
+              />
+            </div>
             {/* §3 Globe story text — blueprint exact phrasing */}
             <div style={{ textAlign: "center" }}>
               <p style={{ fontFamily: "var(--font-heading)", fontSize: "0.9rem", fontWeight: 700, color: "#F3F4F6", letterSpacing: "-0.02em", margin: "0 0 0.35rem" }}>
