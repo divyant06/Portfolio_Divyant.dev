@@ -39,7 +39,7 @@ const RULE: React.CSSProperties = {
 const myLocation: GlobeMarker[] = [{
   lat: 28.6139,
   lng: 77.2090,
-  src: "https://media.licdn.com/dms/image/v2/D5603AQHO6t7k82pkbw/profile-displayphoto-scale_400_400/B56Zjl4.RpHQAs-/0/1756203576978?e=1779321600&v=beta&t=Zf2uhyMd-_UQaAq-UkSN3cWz1EDMqO0nB0xD2RYSImE",
+  src: "/Pfp.jpg",
   label: "Divyant | New Delhi",
 }];
 

@@ -148,6 +148,7 @@ function GlobeMesh({
   const groupRotationRef = useRef(0);
   const dragStartRef = useRef({ x: 0, y: 0, rot: 0 });
   const { gl } = useThree();
+  const earthTexture = useTexture("https://unpkg.com/three-globe/example/img/earth-dark.jpg");
 
   useFrame((_, delta) => {
     if (!groupRef.current) return;
@@ -195,20 +196,9 @@ function GlobeMesh({
       <mesh>
         <sphereGeometry args={[1, 64, 64]} />
         <meshStandardMaterial
-          color={config.globeColor}
+          map={earthTexture}
           roughness={0.85}
           metalness={0.1}
-        />
-      </mesh>
-
-      {/* Dot grid overlay */}
-      <mesh>
-        <sphereGeometry args={[1.001, 64, 64]} />
-        <meshStandardMaterial
-          color="#ffffff"
-          transparent
-          opacity={0.04}
-          wireframe
         />
       </mesh>
 
