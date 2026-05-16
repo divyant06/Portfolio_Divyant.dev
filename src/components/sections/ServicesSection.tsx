@@ -32,7 +32,7 @@ const SERVICES = [
 export function ServicesSection() {
   const [hovered, setHovered] = useState<string | null>(null);
   return (
-    <section id="services" style={{ padding: "7rem 3vw", background: "#050505" }}>
+    <section id="services" style={{ padding: "7rem 3vw", background: "transparent" }}>
       <div style={{ marginBottom: "4rem" }}>
         <span style={{ fontFamily: "var(--font-mono)", fontSize: "0.65rem", letterSpacing: "0.18em", textTransform: "uppercase", color: "#FF4500", display: "block", marginBottom: "1.5rem" }}>What I Do</span>
         <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1, color: "#F3F4F6", margin: 0 }}>Services that ship results.</h2>

@@ -14,6 +14,7 @@ import { TestimonialsCarousel } from "@/components/sections/TestimonialsCarousel
 import { ContactForm } from "@/components/sections/ContactForm";
 import { Globe3D, GlobeMarker } from "@/components/ui/3d-globe";
 import { FloatingDock } from "@/components/ui/floating-dock";
+import { LightWaves } from "@/components/ui/light-waves";
 
 /* ── Shared style tokens ──────────────────────────────── */
 const LABEL: React.CSSProperties = {
@@ -114,22 +115,34 @@ export default function Home() {
       ═══════════════════════════════════════════════════ */}
       <SelectedWorksExpanded />
 
-      <hr style={RULE} />
-
       {/* ═══════════════════════════════════════════════════
-          §4  SERVICES — 3 premium image cards
+          §4–§8  LIGHT-WAVES MASTER WRAPPER
+          LightWaves canvas sits at z:0; all sections at z:10
       ═══════════════════════════════════════════════════ */}
-      <ServicesSection />
+      <div style={{ position: "relative", width: "100%", overflow: "hidden" }}>
+        {/* ── Canvas background ─────────────────────────── */}
+        <div style={{ position: "absolute", inset: 0, zIndex: 0 }}>
+          <LightWaves />
+        </div>
 
-      <hr style={RULE} />
+        <hr style={RULE} />
 
-      {/* ═══════════════════════════════════════════════════
-          §5  PEER PERSPECTIVES  —  infinite marquee
-      ═══════════════════════════════════════════════════ */}
-      <section
-        id="testimonials"
-        style={{ ...SECTION_PAD, paddingLeft: 0, paddingRight: 0 }}
-      >
+        {/* ═══════════════════════════════════════════════════
+            §4  SERVICES — 3 premium image cards
+        ═══════════════════════════════════════════════════ */}
+        <div style={{ position: "relative", zIndex: 10 }}>
+          <ServicesSection />
+        </div>
+
+        <hr style={RULE} />
+
+        {/* ═══════════════════════════════════════════════════
+            §5  PEER PERSPECTIVES  —  infinite marquee
+        ═══════════════════════════════════════════════════ */}
+        <section
+          id="testimonials"
+          style={{ ...SECTION_PAD, paddingLeft: 0, paddingRight: 0, position: "relative", zIndex: 10, background: "transparent" }}
+        >
         <div style={{ paddingLeft: "3vw", paddingRight: "3vw", marginBottom: "3rem" }}>
           <span style={LABEL}>Peer Perspectives</span>
           <h2
@@ -147,16 +160,16 @@ export default function Home() {
           </h2>
         </div>
         <TestimonialsCarousel />
-      </section>
+        </section>
 
-      <hr style={RULE} />
+        <hr style={RULE} />
 
 
 
-      {/* ═══════════════════════════════════════════════════
-          §6  THE SETUP — bento grid + globe
-      ═══════════════════════════════════════════════════ */}
-      <section id="bento" style={SECTION_PAD}>
+        {/* ═══════════════════════════════════════════════════
+            §6  THE SETUP — bento grid + globe
+        ═══════════════════════════════════════════════════ */}
+        <section id="bento" style={{ ...SECTION_PAD, position: "relative", zIndex: 10, background: "transparent" }}>
         <span style={LABEL}>The Setup</span>
 
         <div
@@ -285,14 +298,14 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
 
-      <hr style={RULE} />
+        <hr style={RULE} />
 
-      {/* ═══════════════════════════════════════════════════
-          §2.3  CONTACT FORM & ABOUT MINDSET
-      ═══════════════════════════════════════════════════ */}
-      <section id="about" style={{ ...SECTION_PAD, paddingBottom: "4rem" }}>
+        {/* ═══════════════════════════════════════════════════
+            §2.3  CONTACT FORM & ABOUT MINDSET
+        ═══════════════════════════════════════════════════ */}
+        <section id="about" style={{ ...SECTION_PAD, paddingBottom: "4rem", position: "relative", zIndex: 10, background: "transparent" }}>
         <div style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))",
@@ -342,14 +355,14 @@ export default function Home() {
             </blockquote>
           </div>
         </div>
-      </section>
+        </section>
 
-      <hr style={RULE} />
+        <hr style={RULE} />
 
-      {/* ═══════════════════════════════════════════════════
-          §7  START A PROJECT — Cappen Bot + Cal.com
-      ═══════════════════════════════════════════════════ */}
-      <section id="start" style={SECTION_PAD}>
+        {/* ═══════════════════════════════════════════════════
+            §7  START A PROJECT — Cappen Bot + Cal.com
+        ═══════════════════════════════════════════════════ */}
+        <section id="start" style={{ ...SECTION_PAD, position: "relative", zIndex: 10, background: "transparent" }}>
         <div style={{ marginBottom: "3rem" }}>
           <span style={LABEL}>Start a Project</span>
           <h2 style={{ fontFamily: "var(--font-heading)", fontSize: "clamp(2rem, 4vw, 3.5rem)", fontWeight: 800, letterSpacing: "-0.04em", lineHeight: 1, color: "#F3F4F6", margin: 0 }}>
@@ -360,20 +373,24 @@ export default function Home() {
           </p>
         </div>
         <ProjectStartSection />
-      </section>
+        </section>
 
 
 
-      {/* ═══════════════════════════════════════════════════
-          §8  FOOTER — minimal + AdSense
-      ═══════════════════════════════════════════════════ */}
-      <footer
-        id="footer"
-        style={{
-          borderTop: "1px solid rgba(255,255,255,0.07)",
-          background: "#050505",
-        }}
-      >
+        {/* ═══════════════════════════════════════════════════
+            §8  FOOTER — minimal + AdSense
+        ═══════════════════════════════════════════════════ */}
+        <footer
+          id="footer"
+          style={{
+            borderTop: "1px solid rgba(255,255,255,0.07)",
+            background: "transparent",
+            backdropFilter: "blur(8px)",
+            WebkitBackdropFilter: "blur(8px)",
+            position: "relative",
+            zIndex: 10,
+          }}
+        >
         <div
           style={{
             padding: "2.5rem 3vw",
@@ -404,7 +421,8 @@ export default function Home() {
         </div>
 
         <AdBanner />
-      </footer>
+        </footer>
+      </div>{/* end light-waves wrapper */}
     </>
   );
 }
