@@ -12,6 +12,8 @@
     "@react-three/drei": "^10.7.7",
     "@react-three/fiber": "^9.6.1",
     "@sentry/nextjs": "^10.49.0",
+    "@splinetool/react-spline": "^4.1.0",
+    "@splinetool/runtime": "^1.12.94",
     "@studio-freight/react-lenis": "^0.0.47",
     "@tabler/icons-react": "^3.44.0",
     "class-variance-authority": "^0.7.1",

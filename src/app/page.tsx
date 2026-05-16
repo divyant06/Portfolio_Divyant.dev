@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { InteractiveKeyboard } from "@/components/ui/InteractiveKeyboard";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { GravityPitComp } from "@/components/three";
 import {
@@ -327,21 +328,9 @@ export default function Home() {
             <ContactForm />
           </div>
 
-          {/* Right Side: Mindset Image & Quote */}
+          {/* Right Side: Interactive 3D Scene & Quote */}
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
-            <Image
-              src="/assets/about-mindset.jpg"
-              alt="About Mindset"
-              width={800}
-              height={600}
-              style={{
-                width: "100%",
-                height: "clamp(200px, 30vh, 300px)",
-                objectFit: "cover",
-                borderRadius: "8px",
-                border: "1px solid rgba(255,255,255,0.08)"
-              }}
-            />
+            <InteractiveKeyboard />
             <blockquote style={{
               fontFamily: "var(--font-space-grotesk)",
               fontSize: "clamp(1rem, 1.25vw, 1.125rem)",
