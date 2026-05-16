@@ -235,7 +235,7 @@ export default function Home() {
               <Globe3D
                 markers={myLocation}
                 config={{
-                  atmosphereColor: "#ff4500",
+                  atmosphereColor: "#4da6ff",
                   atmosphereIntensity: 20,
                   bumpScale: 5,
                   autoRotateSpeed: 0.5,

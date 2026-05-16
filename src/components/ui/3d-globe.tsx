@@ -148,7 +148,7 @@ function GlobeMesh({
   const groupRotationRef = useRef(0);
   const dragStartRef = useRef({ x: 0, y: 0, rot: 0 });
   const { gl } = useThree();
-  const earthTexture = useTexture("https://unpkg.com/three-globe/example/img/earth-dark.jpg");
+  const earthTexture = useTexture("https://unpkg.com/three-globe/example/img/earth-blue-marble.jpg");
 
   useFrame((_, delta) => {
     if (!groupRef.current) return;
