@@ -106,17 +106,15 @@ export default function RootLayout({
       className={`${syne.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <body>
-        {/* Google AdSense */}
+      <head>
         <Script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7958603436560948"
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
-        <Script id="adsense-init" strategy="afterInteractive">{`
-          (adsbygoogle = window.adsbygoogle || []).push({});
-        `}</Script>
+      </head>
+      <body>
         <LenisProvider>
           <CustomCursor />
           <Navbar />

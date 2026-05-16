@@ -385,8 +385,8 @@ export default function Home() {
           style={{
             borderTop: "1px solid rgba(255,255,255,0.07)",
             background: "transparent",
-            backdropFilter: "blur(8px)",
-            WebkitBackdropFilter: "blur(8px)",
+            width: "100%",
+            overflow: "hidden",
             position: "relative",
             zIndex: 10,
           }}
@@ -398,7 +398,7 @@ export default function Home() {
             alignItems: "center",
             justifyContent: "space-between",
             flexWrap: "wrap",
-            gap: "1rem",
+            gap: "1.5rem",
           }}
         >
           <span style={{ fontFamily: "var(--font-body)", fontSize: "0.875rem", color: "rgba(255,255,255,0.25)" }}>
@@ -413,11 +413,11 @@ export default function Home() {
               © {new Date().getFullYear()}
             </span>
           </div>
-        </div>
 
-        {/* Social links — FloatingDock */}
-        <div style={{ display: "flex", justifyContent: "center", paddingBottom: "1.5rem", width: "100%" }}>
-          <FloatingDock items={socialLinks} />
+          {/* Social links — FloatingDock */}
+          <div style={{ display: "flex", justifyContent: "center", width: "100%", paddingTop: "1rem" }}>
+            <FloatingDock items={socialLinks} />
+          </div>
         </div>
 
         <AdBanner />
