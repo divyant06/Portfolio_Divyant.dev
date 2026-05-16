@@ -92,6 +92,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://divyantpoddar.dev",
   },
+  other: {
+    "google-adsense-account": "ca-pub-7958603436560948"
+  }
 };
 
 /* ── Root Layout ────────────────────────────────── */
@@ -106,14 +109,6 @@ export default function RootLayout({
       className={`${syne.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <Script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7958603436560948"
-          crossOrigin="anonymous"
-          strategy="afterInteractive"
-        />
-      </head>
       <body>
         <LenisProvider>
           <CustomCursor />
