@@ -46,14 +46,14 @@ export function AdBanner() {
 
   // Render the actual AdSense code in production
   return (
-    <div style={{ display: "block", width: "100%", minWidth: "250px", overflow: "hidden" }}>
+    <div style={{ display: "block", width: "100%", height: "90px", overflow: "hidden", background: "transparent" }}>
       <ins
         ref={reference}
         className="adsbygoogle"
-        style={{ display: "block" }}
+        style={{ display: "block", width: "100%", height: "90px" }}
         data-ad-client="ca-pub-7958603436560948" // <-- REPLACE THIS
         data-ad-slot="4887322173"           // <-- REPLACE THIS
-        data-ad-format="auto"
+        data-ad-format="horizontal"
         data-full-width-responsive="true"
       />
     </div>
