@@ -20,7 +20,7 @@
 
 ## 🎬 Project Walkthrough
 
-[![Portfolio Walkthrough](https://img.shields.io/badge/Watch_Full_Video_Walkthrough-FF4500?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=https://youtu.be/FTCQCi6zJDw)
+[![Portfolio Walkthrough](https://img.shields.io/badge/Watch_Full_Video_Walkthrough-FF4500?style=for-the-badge&logo=youtube&logoColor=white)](FTCQCi6zJDw)
 
 ---
 
