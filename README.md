@@ -20,8 +20,19 @@
 
 ## 🎬 Project Walkthrough
 
-[![Portfolio Walkthrough](https://img.shields.io/badge/Watch_Full_Video_Walkthrough-FF4500?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube-nocookie.com/embed/FTCQCi6zJDw)
+<div align="center">
+  <a href="https://youtu.be/FTCQCi6zJDw">
+    <img src="https://img.youtube.com/vi/FTCQCi6zJDw/maxresdefault.jpg" width="100%" alt="Cinematic Portfolio Walkthrough">
+  </a>
+</div>
 
+<br>
+
+<div align="center">
+
+[![Portfolio Walkthrough](https://img.shields.io/badge/Watch_Full_Video_Walkthrough-FF4500?style=for-the-badge&logo=youtube&logoColor=white)](https://youtu.be/FTCQCi6zJDw?si=nyCRMTyvlXcdWWE4)
+
+</div>
 ---
 
 ## ⚡ Core Architecture & Engineering
