@@ -20,8 +20,6 @@
 
 ## 🎬 Project Walkthrough
 
-*(Drag and drop a 10-second screen-recording GIF of your website interacting with the gravity pit and 3D keyboard right here)*
-
 [![Portfolio Walkthrough](https://img.shields.io/badge/Watch_Full_Video_Walkthrough-FF4500?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/watch?v=https://youtu.be/FTCQCi6zJDw)
 
 ---
